@@ -9,8 +9,10 @@ for (i in 3:9) {
       mydata_small[,i] <- as.numeric(mydata_small[,i])
 }
 
+mydata_complete <- mydata_small[complete.cases(mydata_small$Global_active_power),]
+
 # Construct the plot
-hist(mydata_small$Global_active_power, main = 'Global Active Power', xlab = 'Global Active Power (kilowatts)', col = 'red')
+hist(mydata_complete$Global_active_power, main = 'Global Active Power', xlab = 'Global Active Power (kilowatts)', col = 'red')
 
 # Copy the plot to a PNG file
 dev.copy(png, file = 'plot1.png')
