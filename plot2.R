@@ -8,9 +8,9 @@ for (i in 3:9) {
       mydata_small[,i] <- as.numeric(mydata_small[,i])
 }
 
-# Construct the plot
-plot(x = mydata_small$Time, y = mydata_small$Global_active_power, type = 'l', xlab = '' ,ylab = 'Global Active Power (kilowatts)')
+# Constructing the plot
+png("plot2.png", width=480, height=480)
+plot(x = mydata_small$Time, y = mydata_small$Global_active_power, type = 'l', xlab = '' , ylab = 'Global Active Power (kilowatts)')
 
-# Copy the plot to a PNG file
-dev.copy(png, file = 'plot2.png')
+# Closing the graphics device
 dev.off()

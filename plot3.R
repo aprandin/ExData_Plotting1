@@ -8,7 +8,7 @@ for (i in 3:9) {
       mydata_small[,i] <- as.numeric(mydata_small[,i])
 }
 
-# Construct the plot
+# Constructing the plot
 png("plot3.png", width=480, height=480)
 
 with(mydata_small, plot(x = Time, y = Sub_metering_1, type = 'l', xlab = '' , ylab = 'Energy sub metering'))
